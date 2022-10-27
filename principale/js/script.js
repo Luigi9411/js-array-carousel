@@ -35,26 +35,28 @@ eleButtonDown.addEventListener('click', function () {
 
 	
 	activeIndex++;
-    if (activeIndex === listEleImg.length - 1) {
-		activeIndex = 0;
-	} else {
-        activeIndex++;
-    }
+
 	
 	listEleImg[activeIndex].classList.add('active');
 
-	
-	
+	eleButtonUp.classList.remove('hidden');
+	if (activeIndex === listEleImg.length - 1) {
+		eleButtonDown.classList.add('hidden');
+	}
 });
 
 eleButtonUp.addEventListener('click', function () {
 	
 	listEleImg[activeIndex].classList.remove('active');
-    if (activeIndex === 0) {
-		activeIndex = listEleImg.length - 1;
-	} else {
-        activeIndex--;
-    }
+
+	
+	activeIndex--;
+
 	
 	listEleImg[activeIndex].classList.add('active');
+
+	eleButtonDown.classList.remove('hidden');
+	if (activeIndex === 0) {
+		eleButtonUp.classList.add('hidden');
+	}
 });
