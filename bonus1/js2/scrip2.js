@@ -34,7 +34,7 @@ eleButtonDown.addEventListener('click', function () {
 	listEleImg[activeIndex].classList.remove('active');
 
 	
-	activeIndex++;
+	
     if (activeIndex === listEleImg.length - 1) {
 		activeIndex = 0;
 	} else {
